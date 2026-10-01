@@ -1,23 +1,43 @@
 # Beam & Shaft Stress Analysis Calculator
 
-A Python-based mechanical engineering analysis tool for evaluating the structural behaviour of beams and shafts under specified loading and material conditions.
+A Python-based mechanical engineering analysis tool for evaluating the structural behaviour of beams and shafts under specified loading, geometry, and material conditions.
 
-## Project Overview
+The project contains two independent analysis modules:
 
-This project contains two independent engineering analysis modules:
+- **Beam Analysis**
+- **Shaft Analysis**
 
-1. **Beam Analysis**
-2. **Shaft Analysis**
-
-The program performs analytical calculations and generates engineering plots automatically using Python.
+The program performs analytical calculations and automatically generates engineering plots for visual interpretation of the results.
 
 ---
 
-## 1. Beam Analysis
+## Project Overview
+
+This project was developed as a computational mechanical engineering tool for studying basic structural behaviour using Python.
+
+### Main capabilities
+
+- Beam bending analysis
+- Shear force calculation
+- Bending moment calculation
+- Beam deflection calculation
+- Bending stress calculation
+- Shaft bending stress analysis
+- Torsional shear stress calculation
+- Von Mises stress calculation
+- Factor of Safety calculation
+- Angle of twist calculation
+- Solid vs. hollow shaft comparison
+- Automatic engineering plots
+- Material selection for analysis
+
+---
+
+# 1. Beam Analysis
 
 The beam module evaluates a simply supported beam subjected to a concentrated load.
 
-### Calculations
+### Calculated parameters
 
 - Support reactions
 - Shear force
@@ -28,32 +48,31 @@ The beam module evaluates a simply supported beam subjected to a concentrated lo
 - Factor of Safety
 - Structural status
 
-### Generated Graphs
+The program also generates graphical representations of the calculated response.
 
-- Shear Force Diagram
-- Bending Moment Diagram
-- Beam Deflection Curve
+### Beam outputs
 
-### Example Input
+#### Shear Force Diagram
 
-| Parameter | Value |
-|---|---:|
-| Material | AISI 4140 Steel |
-| Beam Length | 1000 mm |
-| Beam Width | 50 mm |
-| Beam Height | 40 mm |
-| Applied Load | 500 N |
-| Load Position | 500 mm |
+![Shear Force Diagram](shear_force_diagram.png)
+
+#### Bending Moment Diagram
+
+![Bending Moment Diagram](bending_moment_diagram.png)
+
+#### Beam Deflection Curve
+
+![Beam Deflection](beam_deflection.png)
 
 ---
 
-## 2. Shaft Analysis
+# 2. Shaft Analysis
 
-The shaft module evaluates the structural response of a circular shaft subjected to bending and torsional loading.
+The shaft module evaluates the structural behaviour of a shaft subjected to bending and torsional loading.
 
-The program supports both solid and hollow shaft configurations.
+Both **solid** and **hollow** shaft configurations can be analysed.
 
-### Calculations
+### Calculated parameters
 
 - Cross-sectional area
 - Area moment of inertia
@@ -67,16 +86,25 @@ The program supports both solid and hollow shaft configurations.
 - Factor of Safety
 - Structural status
 
-### Generated Graphs
+---
 
-- Shaft Stress Distribution
-- Solid vs Hollow Shaft Comparison
+## Stress Distribution
+
+The shaft module generates the stress distribution across the radial position of the shaft.
+
+![Shaft Stress Distribution](shaft_stress_distribution.png)
+
+The plot provides a visual comparison of:
+
+- Bending stress
+- Torsional shear stress
+- Von Mises stress
 
 ---
 
-## 3. Solid vs Hollow Shaft Analysis
+# 3. Solid vs Hollow Shaft Comparison
 
-The program compares a solid shaft with a selected hollow shaft having the same outer diameter.
+The tool can compare a solid shaft with a selected hollow shaft configuration.
 
 The comparison includes:
 
@@ -87,47 +115,32 @@ The comparison includes:
 - Factor of Safety
 - Mass reduction
 
-### Example Result
+### Example comparison
 
-For the tested shaft configuration:
+![Solid vs Hollow Shaft Comparison](solid_vs_hollow_comparison.png)
 
-| Parameter | Solid Shaft | Hollow Shaft |
-|---|---:|---:|
-| Outer Diameter | 40 mm | 40 mm |
-| Inner Diameter | 0 mm | 30 mm |
-| Mass | 9.865 kg | 4.316 kg |
-| Bending Stress | 31.83 MPa | 46.56 MPa |
-| Torsional Shear | 7.96 MPa | 11.64 MPa |
-| Von Mises Stress | 34.69 MPa | 50.74 MPa |
-| Factor of Safety | 18.88 | 12.91 |
-
-The tested hollow-shaft configuration produced a calculated mass reduction of **56.25%** while maintaining a calculated Factor of Safety above unity for the specified loading conditions.
+This allows the effect of changing the shaft cross-section to be examined from both structural and mass perspectives.
 
 ---
 
-## 4. Software and Technologies
+# 4. Materials
 
-- Python 3
-- NumPy
-- Matplotlib
+The beam analysis module provides selectable engineering materials with corresponding elastic modulus and yield-strength values.
+
+The shaft analysis also incorporates material properties required for stress and safety calculations.
+
+The material database can be extended as additional materials are required.
 
 ---
 
-## 5. Project Structure
+# 5. Technologies Used
+
+- **Python**
+- **NumPy**
+- **Matplotlib**
+
+### Python modules
 
 ```text
-Pyth/
-│
-├── beam.py
-├── shaft.py
-│
-├── results/
-│   ├── beam_deflection.png
-│   ├── bending_moment_diagram.png
-│   ├── shear_force_diagram.png
-│   ├── shaft_stress_distribution.png
-│   └── solid_vs_hollow_comparison.png
-│
-├── Screenshots/
-│
-└── README.md
+beam.py
+shaft.py
