@@ -144,3 +144,52 @@ The material database can be extended as additional materials are required.
 ```text
 beam.py
 shaft.py
+
+---
+
+## Analysis Results
+
+### Beam Deflection
+![Beam Deflection](results/beam_deflection.png)
+
+### Bending Moment Diagram
+![Bending Moment Diagram](results/bending_moment_diagram.png)
+
+### Shear Force Diagram
+![Shear Force Diagram](results/shear_force_diagram.png)
+
+### Shaft Stress Distribution
+![Shaft Stress Distribution](results/shaft_stress_distribution.png)
+
+### Solid vs Hollow Shaft Comparison
+![Solid vs Hollow Shaft](results/solid_vs_hollow_comparison.png)
+
+---
+
+## How to Run
+
+### Requirements
+
+Python 3.x
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+### Beam Analysis
+
+Run:
+
+```bash
+python beam.py
+```
+
+### Shaft Analysis
+
+Run:
+
+```bash
+python shaft.py
+```
