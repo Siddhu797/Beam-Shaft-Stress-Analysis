@@ -31,7 +31,7 @@ This project was developed as a computational mechanical engineering tool for st
 - Automatic engineering plots
 - Material selection for analysis
 
----
+----
 
 # 1. Beam Analysis
 
