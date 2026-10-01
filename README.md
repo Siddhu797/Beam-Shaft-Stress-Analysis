@@ -49,23 +49,7 @@ The beam module evaluates a simply supported beam subjected to a concentrated lo
 - Structural status
 
 The program also generates graphical representations of the calculated response.
-
-### Beam outputs
-
-#### Shear Force Diagram
-
-![Shear Force Diagram](shear_force_diagram.png)
-
-#### Bending Moment Diagram
-
-![Bending Moment Diagram](bending_moment_diagram.png)
-
-#### Beam Deflection Curve
-
-![Beam Deflection](beam_deflection.png)
-
 ---
-
 # 2. Shaft Analysis
 
 The shaft module evaluates the structural behaviour of a shaft subjected to bending and torsional loading.
@@ -92,8 +76,6 @@ Both **solid** and **hollow** shaft configurations can be analysed.
 
 The shaft module generates the stress distribution across the radial position of the shaft.
 
-![Shaft Stress Distribution](shaft_stress_distribution.png)
-
 The plot provides a visual comparison of:
 
 - Bending stress
@@ -114,12 +96,6 @@ The comparison includes:
 - Von Mises stress
 - Factor of Safety
 - Mass reduction
-
-### Example comparison
-
-![Solid vs Hollow Shaft Comparison](solid_vs_hollow_comparison.png)
-
-This allows the effect of changing the shaft cross-section to be examined from both structural and mass perspectives.
 
 ---
 
